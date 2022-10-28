@@ -25,39 +25,17 @@ const Users = db.define('users', {
             isEmail: true
         }
     },
-    phone: {
-        type: DataTypes.STRING, //+51
-        allowNull: false
-    },
     password: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    birthday: {
-        type: DataTypes.DATEONLY,
+    phone: {
+        type: DataTypes.STRING, //+51
         allowNull: false
     },
-    gender: {
-        type: DataTypes.STRING
-    },
-    role: {
+    profileImage: {
         type: DataTypes.STRING,
-        allowNull: false,
-        defaultValue: 'normal'
-    },
-    country: {
-        type: DataTypes.STRING
-    },
-    status: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        defaultValue: 'active'
-    },
-    isVerified: {
-        type: DataTypes.BOOLEAN,
-        allowNull: false,
-        field: 'is_verified',
-        defaultValue: false
+        field: 'profile_image'
     }
 });
 
