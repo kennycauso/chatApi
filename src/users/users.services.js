@@ -65,7 +65,7 @@ const deleteUser = (req, res) => {
         .deleteUser(id)
         .then((response) => {
             if (response) {
-                res.status(204).json();
+                res.status(204).json({message: "deleted successfully"});
             } else {
                 res.status(404).json({ message: "Invalid ID" });
             }
