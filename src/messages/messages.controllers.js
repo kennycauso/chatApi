@@ -14,7 +14,7 @@ const getMessageByConversationById = async (conversationId, messageId) => {
     const data = await Messages.findOne({
         where: {
             conversationId,
-            messageId
+            id: messageId
         }
     });
     return data;
@@ -34,7 +34,7 @@ const deleteMessageByConversationById = async (conversationId, messageId) => {
     const data = await Messages.destroy({
         where: {
             conversationId,
-            messageId
+            id: messageId
         }
     });
     return data;
